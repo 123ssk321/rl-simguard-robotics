@@ -1,0 +1,573 @@
+{
+  "project_slug": "simguard-robotics",
+  "first_public_result_month": 4,
+  "total_hours": 396,
+  "reserve_hours": 120,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "SG-M1",
+      "title": "Scope, rights and laptop feasibility",
+      "description": "Relative to explicit activation: Month 1; 46 task hours + 20 reserve; cumulative 66 hours. Tasks SG-001–SG-005. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 1",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 66
+    },
+    {
+      "id": "SG-M2",
+      "title": "Internal end-to-end slice",
+      "description": "Relative to explicit activation: Months 2–3; 46 task hours + 20 reserve; cumulative 132 hours. Tasks SG-006–SG-010. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 2–3",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 132
+    },
+    {
+      "id": "SG-M3",
+      "title": "First functional public alpha",
+      "description": "Relative to explicit activation: Month 4; 46 task hours + 20 reserve; cumulative 198 hours. Tasks SG-011–SG-015. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 4",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 198
+    },
+    {
+      "id": "SG-M4",
+      "title": "Baselines, held-out evaluation and RL decision",
+      "description": "Relative to explicit activation: Months 5–7; 46 task hours + 20 reserve; cumulative 264 hours. Tasks SG-016–SG-020. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 264
+    },
+    {
+      "id": "SG-M5",
+      "title": "Reliability and local product interfaces",
+      "description": "Relative to explicit activation: Months 7–9; 46 task hours + 20 reserve; cumulative 330 hours. Tasks SG-021–SG-025. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 7–9",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 330
+    },
+    {
+      "id": "SG-M6",
+      "title": "Stable release and product decision",
+      "description": "Relative to explicit activation: Month 10; 46 task hours + 20 reserve; cumulative 396 hours. Tasks SG-026–SG-030. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 10",
+      "work_hours": 46,
+      "reserve_hours": 20,
+      "cumulative_hours": 396
+    }
+  ],
+  "issues": [
+    {
+      "id": "SG-001",
+      "title": "Choose one simulation task and observation contract",
+      "body": "## Goal\nChoose one simulation task and observation contract for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Pin a low-dimensional task and define resets, actions, termination and success.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/TASK_CONTRACT.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nExplicit version and units; domain-specific success distinct from average return.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nNone beyond explicit project activation.\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "SG-002",
+      "title": "Audit simulator and robot asset rights",
+      "body": "## Goal\nAudit simulator and robot asset rights for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Record provenance and distribution terms for simulator, assets and checkpoints.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/DATA_RIGHTS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEvery bundled artifact has a resolved license; unsupported redistribution excluded.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-001\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M1",
+      "depends_on": [
+        "SG-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "SG-003",
+      "title": "Measure headless local feasibility",
+      "body": "## Goal\nMeasure headless local feasibility for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Profile baseline episodes without rendering; measure optional GPU separately.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: benchmarks/smoke.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nRecord CPU throughput, peak RAM and deterministic tolerance; shrink episode cap to fit laptop.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-002\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M1",
+      "depends_on": [
+        "SG-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "SG-004",
+      "title": "Record acceptance targets and compute budget",
+      "body": "## Goal\nRecord acceptance targets and compute budget for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Predeclare metric hierarchy, test regime, maximum trials and scope reduction criteria.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/ACCEPTANCE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTargets are labeled planned; training, tuning and release evidence have separate budgets.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-003\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M1",
+      "depends_on": [
+        "SG-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "SG-005",
+      "title": "Prepare package and offline CI skeleton",
+      "body": "## Goal\nPrepare package and offline CI skeleton for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin supported Python/dependencies and configure typing, lint and small generated tests.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: pyproject.toml; .github/workflows/ci.yml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh environment runs checks with no dataset download, network key or GPU dependency.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-004\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M1",
+      "depends_on": [
+        "SG-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "SG-006",
+      "title": "Implement reset and scenario manifests",
+      "body": "## Goal\nImplement reset and scenario manifests for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Generate task parameters from fixed seeds and validate supported ranges.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/scenarios.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nSame seed replays parameters exactly; invalid ranges rejected before rollout.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-005\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M2",
+      "depends_on": [
+        "SG-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "SG-007",
+      "title": "Define a bounded policy execution adapter",
+      "body": "## Goal\nDefine a bounded policy execution adapter for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Unify baseline and checkpoint observations/actions with output checks.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/policies.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNaN, wrong shape and out-of-bounds actions have explicit failure outcomes.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-006\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M2",
+      "depends_on": [
+        "SG-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "SG-008",
+      "title": "Record trajectories and baseline metrics",
+      "body": "## Goal\nRecord trajectories and baseline metrics for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Stream bounded state/action summaries and termination reasons.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/runner.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEpisode IDs unique; crash, timeout, truncation and success remain distinct.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-007\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M2",
+      "depends_on": [
+        "SG-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "SG-009",
+      "title": "Test domain invariants and invalid inputs",
+      "body": "## Goal\nTest domain invariants and invalid inputs for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Exercise transition conservation, action shapes, units and malformed configs against the chosen domain.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_contracts.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTests fail for injected accounting or contract defects and cover empty/boundary cases.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-008\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M2",
+      "depends_on": [
+        "SG-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "SG-010",
+      "title": "Wire a small CLI vertical slice",
+      "body": "## Goal\nWire a small CLI vertical slice for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Connect validated config, generated scenario, baseline execution and structured output.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard_robotics/cli.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne command runs locally; invalid configs have a useful error and nonzero exit status.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-009\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M2",
+      "depends_on": [
+        "SG-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "SG-011",
+      "title": "Train or import one compact RL policy",
+      "body": "## Goal\nTrain or import one compact RL policy for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Use maintained PPO/SAC with a small state-based policy and fixed trial budget.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/train.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne learning curve and reproducible evaluation available; random/scripted comparator retained.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-010\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M3",
+      "depends_on": [
+        "SG-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "SG-012",
+      "title": "Add parameter perturbation suite",
+      "body": "## Goal\nAdd parameter perturbation suite for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Vary one physically meaningful parameter at a time within supported simulator ranges.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: configs/perturbations.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nManifest identifies nominal versus shifted conditions; no parameter silently ignored.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-011\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M3",
+      "depends_on": [
+        "SG-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "SG-013",
+      "title": "Release a reproducible scorecard demo",
+      "body": "## Goal\nRelease a reproducible scorecard demo for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Run nominal and degraded policy versions and export HTML/JSON.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: examples/demo.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nClean clone reproduces a failure artifact and all claims are simulation-scoped.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-012\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M3",
+      "depends_on": [
+        "SG-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "SG-014",
+      "title": "Package reproducible install and examples",
+      "body": "## Goal\nPackage reproducible install and examples for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin dependencies, record tested platform and publish minimal synthetic example configs.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/INSTALL.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nClean installation and demo pass on CPU within measured memory/runtime envelope.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-013\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M3",
+      "depends_on": [
+        "SG-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "SG-015",
+      "title": "Review alpha evidence and release boundary",
+      "body": "## Goal\nReview alpha evidence and release boundary for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Run milestone acceptance checks, record failures and narrow scope if needed.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/alpha_acceptance.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFirst public artifact is runnable, dated relative to activation at or after month3, with limitations and reproducible commands.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-014\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M3",
+      "depends_on": [
+        "SG-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "SG-016",
+      "title": "Freeze validation and regression thresholds",
+      "body": "## Goal\nFreeze validation and regression thresholds for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Choose acceptance on development seeds; reserve held-out seeds and parameter shifts.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: configs/release_gate.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nThreshold edits versioned; held-out results cannot be used as fresh tuning evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-015\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M4",
+      "depends_on": [
+        "SG-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "SG-017",
+      "title": "Run paired robustness comparisons",
+      "body": "## Goal\nRun paired robustness comparisons for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Compare checkpoint versions using shared seeds and per-scenario summaries.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/robustness.json. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReport uncertainty, failures and slice counts; no unsupported independence assumption.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-016\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M4",
+      "depends_on": [
+        "SG-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "SG-018",
+      "title": "Add failure replay artifacts",
+      "body": "## Goal\nAdd failure replay artifacts for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Replay a selected failed seed with optional sparse rendering.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/replay.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReplay reconstructs parameters and policy hash; render dependency remains optional.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-017\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M4",
+      "depends_on": [
+        "SG-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "SG-019",
+      "title": "Register all evaluation runs and failed trials",
+      "body": "## Goal\nRegister all evaluation runs and failed trials for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Store config hashes, seeds, policy version, raw metrics and failed attempts.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard_robotics/evaluation_registry.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDuplicate run identity handled explicitly; selection/tuning history cannot silently overwrite holdout evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-018\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M4",
+      "depends_on": [
+        "SG-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "SG-020",
+      "title": "Make the RL retention decision",
+      "body": "## Goal\nMake the RL retention decision for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Compare strongest baseline and RL under predeclared criteria and resource costs.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/policy_decision.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nKeep, baseline-default or remove RL decision cites measurements and uncertainty; negative results preserved.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-019\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M4",
+      "depends_on": [
+        "SG-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "SG-021",
+      "title": "Handle runner timeouts and cancellation",
+      "body": "## Goal\nHandle runner timeouts and cancellation for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Isolate long rollouts with explicit cancellation and partial results.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/execution.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nHung policy cannot block the CLI indefinitely; report is marked incomplete.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-020\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M5",
+      "depends_on": [
+        "SG-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "SG-022",
+      "title": "Reject unsafe checkpoint formats",
+      "body": "## Goal\nReject unsafe checkpoint formats for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Admit a narrow state-dict/metadata format and validate shapes and hashes.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/artifacts.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nUntrusted arbitrary-code deserialization excluded; corrupted data rejected.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-021\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M5",
+      "depends_on": [
+        "SG-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "SG-023",
+      "title": "Stabilize report and adapter schemas",
+      "body": "## Goal\nStabilize report and adapter schemas for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Version configuration and results; add compatible-load rules.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/simguard/schemas.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOlder supported report fixture loads; incompatible task version fails explicitly.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-022\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M5",
+      "depends_on": [
+        "SG-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "SG-024",
+      "title": "Test integrated failure and recovery paths",
+      "body": "## Goal\nTest integrated failure and recovery paths for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Inject cancellation, corrupt artifact and partial storage failure through the full workflow.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_recovery.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo incomplete result is reported as success; deterministic recovery or explicit failure verified.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-023\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M5",
+      "depends_on": [
+        "SG-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "SG-025",
+      "title": "Review local operational and security boundary",
+      "body": "## Goal\nReview local operational and security boundary for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Document supported inputs, local-only defaults, log retention, resource caps and upgrade procedure.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/OPERATIONS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nThreat model covers malformed files and untrusted checkpoints; dependencies/asset rights resolved for release.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-024\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M5",
+      "depends_on": [
+        "SG-024"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "SG-026",
+      "title": "Add one second task only behind a gate",
+      "body": "## Goal\nAdd one second task only behind a gate for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Evaluate extension effort after first-task reliability and document decision.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/ADAPTER_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEither scoped adapter tests pass or feature is parked without weakening core release.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-025\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M6",
+      "depends_on": [
+        "SG-025"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "SG-027",
+      "title": "Measure CI and local runtime envelopes",
+      "body": "## Goal\nMeasure CI and local runtime envelopes for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Benchmark smoke subset and full suite with fixed hardware details.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/runtime.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDocument measured installation/runtime ceilings and no GPU requirement.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-026\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M6",
+      "depends_on": [
+        "SG-026"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "SG-028",
+      "title": "Publish limits and product decision",
+      "body": "## Goal\nPublish limits and product decision for SimGuard Robotics. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Assess regression workflow and optional developer feedback.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/PRODUCT_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo claim of physical safety; choose OSS tool/support path only with actual evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-027\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "SG-M6",
+      "depends_on": [
+        "SG-027"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "SG-029",
+      "title": "Produce versioned release and recorded demonstration",
+      "body": "## Goal\nProduce versioned release and recorded demonstration for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Build installable package, examples, release notes and a short workflow recording.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/RELEASE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh-clone replay passes; release files include provenance and known failures; no unmeasured performance claim.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-028\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M6",
+      "depends_on": [
+        "SG-028"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "SG-030",
+      "title": "Close the milestone with evidence and remaining budget",
+      "body": "## Goal\nClose the milestone with evidence and remaining budget for SimGuard Robotics. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Audit acceptance evidence, actual hours and optional user signals; document maintenance or next activation decision.\n2. Verify against the project's domain contract and evidence boundary: Simulation-only policy evaluation. No physical robot operation, real-world safety qualification or broad simulator platform.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/final_review.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReviewer can trace every claimed capability to a test/demo; all unresolved work remains explicit and no automatic next project starts.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nSG-029\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "SG-M6",
+      "depends_on": [
+        "SG-029"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}

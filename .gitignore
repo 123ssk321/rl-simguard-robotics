@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+.env
+.env.*
+data/raw/
+artifacts/private/
+*.pyc
